@@ -14,7 +14,7 @@ const UserItems=({ user: { login = "", avatar_url = "" } = {} })=> {
     </div>
      <div className='card-title'>
      <h2 >{login}</h2>
-      <Link to="/about"
+      <Link to={`user/${login}`}
       className='text-white text-opacity-40 my-4'>
       View Profile
       </Link>
