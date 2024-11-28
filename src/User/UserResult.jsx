@@ -3,6 +3,7 @@ import { useContext } from 'react'
 import { useEffect } from 'react'
 import GithubContext from '../GithubContext'
 import UserItems from './UserItems'
+import spinner from "../assets/spinner.gif"
 
 
 
@@ -33,7 +34,9 @@ function UserResult() {
 }
 else{
   return(
-    <h3>Loading.......</h3>
+    <img className='m-auto h-16 w-16 sm:h-20 sm:w-20 md:h-24 md:w-24 lg:h-32 lg:w-32'
+    src={spinner}
+    ></img>
   )
 }
 }
