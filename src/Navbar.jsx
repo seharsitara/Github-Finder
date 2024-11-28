@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState } from 'react';
 import  logo from './assets/logo.jpg.png'
-
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   
@@ -66,7 +66,7 @@ const Navbar = () => {
               href="#"
               className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-400 md:p-0 dark:text-white md:dark:hover:text-blue-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
             >
-              Home
+             <Link to="/">Home</Link>
             </a>
           </li>
           <li>
@@ -74,7 +74,7 @@ const Navbar = () => {
               href="#"
               className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:p-0  md:hover:text-blue-400 dark:text-white md:dark:hover:text-blue-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
             >
-              Contact
+            <Link to="/about">About</Link>  
             </a>
           </li>
         </ul>
