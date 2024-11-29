@@ -9,11 +9,11 @@ import spinner from "../assets/spinner.gif"
 
 function UserResult() {
 
-  const {users,loading,getUsers}=useContext(GithubContext)
-  console.log({ users, loading });
+  const {users,loading}=useContext(GithubContext)
+  console.log({ users,loading });
   useEffect(()=>{
 
-    getUsers()
+    
 
   },[]);
   
@@ -21,7 +21,7 @@ function UserResult() {
 
    if(!loading){
   return (
-    <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-14'>
+    <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-14 m-12'>
       {users.map((user)=>{
  return ( 
            <UserItems key={user.id} user={user}/>
