@@ -5,6 +5,7 @@ import { BrowserRouter as Router,Routes,Route } from "react-router-dom";
 import Footer from "./Footer";
 import { GithubProvider } from "./GithubContext";
 import NotFound from "./NotFound";
+import GetUser from "./GetUser";
 
 function App() {
   
@@ -17,6 +18,7 @@ function App() {
         <Routes>
         <Route  path="/"  element={<Home/>}></Route>
          <Route path="/about"  element={<About/>}></Route>
+         <Route path="/user/:login" element={<GetUser/>}></Route>
          <Route path="/*" element={<NotFound/>}></Route>
        </Routes>
       </main>

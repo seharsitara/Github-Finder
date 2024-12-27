@@ -10,6 +10,8 @@ const GithubContext=createContext();
 export const  GithubProvider=({children})=> {
 
   const [users,setUsers]=useState([]);
+  const [user,setUser]=useState({});
+  const [repo,setRepo]=useState([]);
   const [loading,setLoading]=useState(false);
 
 
@@ -31,6 +33,51 @@ export const  GithubProvider=({children})=> {
      setLoading(false)
   }
 
+
+
+  const getUser= async(login) => {
+    setLoading(true)
+    
+    
+     const response= await fetch(`${GITHUB_URL}/users/${login}` ,{
+      headers: {
+        Authorization : `token ${GITHUB_TOKEN}`,
+        },
+     })
+
+     if(response.status===404){
+      window.location="/notfound"
+     }else{
+      const data= await response.json();
+     console.log(data)
+       
+     setUser(data);
+     setLoading(false)
+  }
+     }
+     
+     const getUserRepo= async(login) => {
+      setLoading(true)
+      
+      const params= new URLSearchParams({
+        sort:"created",
+        per_page: 10
+      })
+       const response= await fetch(`${GITHUB_URL}/users/${login}/repos?${params}` ,{
+        headers: {
+          Authorization : `token ${GITHUB_TOKEN}`,
+          },
+       })
+  
+       
+        const data= await response.json();
+       console.log(data)
+         
+       setRepo(data);
+       setLoading(false)
+  
+       }
+
   const clearUsers=()=>{
     setUsers([]);
   }
@@ -38,9 +85,13 @@ export const  GithubProvider=({children})=> {
 return <GithubContext.Provider 
      value={{
       users,
+      user,
+      repo,
       loading,
       searchUsers,
-      clearUsers
+      clearUsers,
+      getUser,
+      getUserRepo,
      }}
   >
     {children}
