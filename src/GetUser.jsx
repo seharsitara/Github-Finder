@@ -46,8 +46,8 @@ function Getuser() {
   return (
     <>
     
-    <div className="bg-gray-800 flex justify-center items-center min-h-screen">
-  <div style={{ backgroundColor: "#F3F7EC" }} className=" p-6 rounded-lg shadow-lg w-full max-w-6xl">
+    <div className="bg-slate-800 flex justify-center items-center min-h-screen">
+  <div /*style={{ backgroundColor: "#F3F7EC" }} */className="bg-slate-800 p-6 rounded-lg shadow-xl  md:mx-16 mx-10 lg:my-2 my-16 w-full max-w-6xl">
     {/* Go Back Button */}
     <div className="flex items-center mb-4">
       <button
@@ -70,7 +70,7 @@ function Getuser() {
             className="w-24 h-24 sm:w-32 sm:h-32 rounded-full border border-gray-300 mb-4"
           />
           {/* Name */}
-          <h2 style={{ color: '#758694' }} className="text-xl sm:text-2xl font-semibold ">
+          <h2 style={{ color: '#F3F7EC' }} className="text-xl sm:text-2xl font-semibold ">
             {user.login}
           </h2>
           {/* Hirable */}
@@ -87,34 +87,34 @@ function Getuser() {
 </div>
    {/* Location */}
           {user.location && (
-            <p style={{ color: '#758694' }} className="text-sm text-white mt-2">📍 {user.location}</p>
+            <p style={{ color: '#F3F7EC' }} className="text-sm text-white mt-2">📍 {user.location}</p>
             
           )}
         </div>
 
         {/* Bio */}
-        <p style={{ color: '#758694' }} className=" text-sm leading-relaxed mb-6 text-center">
+        <p style={{ color: '#F3F7EC' }} className=" text-sm leading-relaxed mb-6 text-center">
           {user.bio || "This user has no bio."}
         </p>
 
         {/* Following and Followers */}
         <div className="grid lg:grid-cols-4 grid-cols-2 gap-4 border-t  border-gray-400 pt-4">
           <div  className="text-center border-r border-gray-400">
-            <p style={{ color: '#758694' }} className="text-sm ">Following</p>
-            <p style={{ color: '#758694' }} className="font-bold ">{user.following}</p>
+            <p style={{ color: '#F3F7EC' }} className="text-sm ">Following</p>
+            <p style={{ color: '#F3F7EC' }} className="font-bold ">{user.following}</p>
           </div>
           <div  className="text-center lg:border-r border-gray-400">
-            <p style={{ color: '#758694' }} className="text-sm">Followers</p>
-            <p style={{ color: '#758694' }} className="font-bold">{user.followers}</p>
+            <p style={{ color: '#F3F7EC' }} className="text-sm">Followers</p>
+            <p style={{ color: '#F3F7EC' }} className="font-bold">{user.followers}</p>
           </div>
     
           <div  className="text-center border-r border-gray-400 ">
-            <p style={{ color: '#758694' }} className="text-sm ">Public gists</p>
-            <p style={{ color: '#758694' }} className="font-bold">{user.public_gists}</p>
+            <p style={{ color: '#F3F7EC' }} className="text-sm ">Public gists</p>
+            <p style={{ color: '#F3F7EC' }} className="font-bold">{user.public_gists}</p>
           </div>
           <div className="text-center">
-            <p style={{ color: '#758694' }} className="text-sm">Public repos</p>
-            <p style={{ color: '#758694' }} className="font-bold">{user.public_repos}</p>
+            <p style={{ color: '#F3F7EC' }} className="text-sm">Public repos</p>
+            <p style={{ color: '#F3F7EC' }} className="font-bold">{user.public_repos}</p>
           </div>
         </div>
         </div>
@@ -143,13 +143,13 @@ function Getuser() {
 
         <div className='' >
             <h1 className='text-blue-500 text-xl sm:text-2xl font-semibold mt-5'>Top Repositries</h1>
-            <ul style={{ color: '#758694' }} className=' py-5'>
+            <ul style={{ color: '#F3F7EC' }} className=' py-5'>
         {repo.map((repos) => (
     <li className='py-5 px-4 shadow-md '
     key={repos.id}>
   <h3 className="text-lg font-semibold">
-    <FontAwesomeIcon icon={faLink} style={{ color: '#758694' }} className=" mr-2" />
-    <a style={{ color: '#758694' }}
+    <FontAwesomeIcon icon={faLink} style={{ color: '#F3F7EC' }} className=" mr-2" />
+    <a style={{ color: '#F3F7EC' }}
       href={user.html_url}
       target="_blank"
       rel="noopener noreferrer"
