@@ -158,7 +158,7 @@ function Getuser() {
       {repos.name}
     </a>
   </h3>
-          <div className="mt-6 text-sm flex flex-row gap-4">
+          <div className="mt-6 text-sm md:flex md:flex-row gap-4 grid grid-cols-2 md:w-full w-28 ">
               <div style={{ backgroundColor: "#ECEBDE" }} className="flex items-center px-2 py-1 rounded-lg">
                 <FontAwesomeIcon icon={faStar} className="text-yellow-400 mr-1" />
                 <span className="text-gray-500">{repos.stargazers_count}</span>
@@ -172,7 +172,7 @@ function Getuser() {
                 <span className="text-gray-500">{repos.watchers_count}</span>
               </div>
               <div style={{ backgroundColor: "#ECEBDE" }} className="flex items-center px-2 py-1 rounded-lg">
-                <FontAwesomeIcon icon={faInfo} className="text-green-500 mr-1" />
+                <FontAwesomeIcon icon={faInfo} className="text-green-500 mr-2" />
                 <span className="text-gray-500">{repos.open_issues}</span>
               </div>
             
