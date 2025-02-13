@@ -52,7 +52,7 @@ function Getuser() {
     <div className="flex items-center mb-4">
       <button
         onClick={handleBackBtn}
-        className="flex items-center bg-blue-600 text-white px-4 py-1 rounded-lg shadow-md hover:bg-blue-700 transition duration-200"
+        className="flex items-center bg-blue-600 text-white px-4 py-1 pb-2 rounded-lg shadow-md hover:bg-blue-700 transition duration-200"
       >
         <span className="font-medium">&larr;</span> {/* Simple Left Arrow */}
         
