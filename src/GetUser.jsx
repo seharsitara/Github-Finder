@@ -52,9 +52,9 @@ function Getuser() {
     <div className="flex items-center mb-4">
       <button
         onClick={handleBackBtn}
-        className="flex items-center bg-blue-600 text-white pl-3 pr-2 py-2 rounded-lg shadow-md hover:bg-blue-700 transition duration-200"
+        className="flex items-center bg-blue-600 text-white px-4 py-1 rounded-lg shadow-md hover:bg-blue-700 transition duration-200"
       >
-        <span className="mr-2 font-medium">&larr;</span> {/* Simple Left Arrow */}
+        <span className="font-medium">&larr;</span> {/* Simple Left Arrow */}
         
       </button>
     </div>
@@ -161,19 +161,19 @@ function Getuser() {
           <div className="mt-6 text-sm flex flex-row gap-4">
               <div style={{ backgroundColor: "#ECEBDE" }} className="flex items-center px-2 py-1 rounded-lg">
                 <FontAwesomeIcon icon={faStar} className="text-yellow-400 mr-1" />
-                <span>{repos.stargazers_count}</span>
+                <span className="text-gray-500">{repos.stargazers_count}</span>
               </div>
               <div style={{ backgroundColor: "#ECEBDE" }} className="flex items-center px-2 py-1 rounded-lg">
                 <FontAwesomeIcon icon={faUtensils} className="text-red-400 mr-1" />
-                <span>{repos.forks}</span>
+                <span className="text-gray-500">{repos.forks}</span>
               </div>
               <div  style={{ backgroundColor: "#ECEBDE" }} className="flex items-center px-2 py-1 rounded-lg">
                 <FontAwesomeIcon icon={faEye} className="text-blue-400 mr-1" />
-                <span>{repos.watchers_count}</span>
+                <span className="text-gray-500">{repos.watchers_count}</span>
               </div>
               <div style={{ backgroundColor: "#ECEBDE" }} className="flex items-center px-2 py-1 rounded-lg">
                 <FontAwesomeIcon icon={faInfo} className="text-green-500 mr-1" />
-                <span>{repos.open_issues}</span>
+                <span className="text-gray-500">{repos.open_issues}</span>
               </div>
             
   </div>
